@@ -47,6 +47,70 @@ public class Employee {
 		childIdNumbers = new LinkedList<String>();
 	}
 	
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmployeeId() {
+		return this.employeeId;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getFirstName() {
+		return this.firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getLastName() {
+		return this.lastName;
+	}
+
+	public void setIdnumber(String idNumber) {
+		this.idNumber = idNumber;
+	}
+
+	public String getIdNumber() {
+		return this.idNumber;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getAddress() {
+		return this.address;
+	}
+
+	public void setDateJoined(LocalDate dateJoined) {
+		this.dateJoined = dateJoined;
+	}
+
+	public LocalDate getDateJoined() {
+		return this.dateJoined;
+	}
+
+	public void setIsForeigner(boolean isForeigner) {
+		this.isForeigner = isForeigner;
+	}
+
+	public boolean getIsForeigner() {
+		return this.isForeigner;
+	}
+
+	public void setGender(Gender gender){
+		this.gender = gender;
+	}
+
+	public Gender getGender(){
+		return this.gender;
+	}
+	
 	/**
 	 * Fungsi untuk menentukan gaji bulanan pegawai berdasarkan grade kepegawaiannya (grade 1: 3.000.000 per bulan, grade 2: 5.000.000 per bulan, grade 3: 7.000.000 per bulan)
 	 * Jika pegawai adalah warga negara asing gaji bulanan diperbesar sebanyak 50%
