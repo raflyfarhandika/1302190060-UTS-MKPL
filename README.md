@@ -1,2 +1,3 @@
 # 1302190060-UTS-MKPL
 Nama : Rafly Farhandika
+NIM  : 1302190060
