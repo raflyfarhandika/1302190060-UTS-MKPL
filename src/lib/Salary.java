@@ -1,7 +1,5 @@
 package lib;
 
-import java.time.LocalDate;
-
 public class Salary extends Family{
 
     private int monthlySalary;
@@ -13,10 +11,7 @@ public class Salary extends Family{
 
     public Salary(Employee employee) {
         super(employee);
-        //TODO Auto-generated constructor stub
     }
-
-
 
     public void setMonthlySalary(int grade, Employee employee) {	
 		if (grade == 1) {
@@ -36,26 +31,37 @@ public class Salary extends Family{
 			}
 		}
 	}
+
+	public void setMonthWorkingInYear(int monthWorkingInYear) {
+		this.monthWorkingInYear = monthWorkingInYear;
+	}
+
+	public int getMonthWorkingInYear() {
+		return monthWorkingInYear;
+	}
+
+	public int getMonthlySalary() {
+		return monthlySalary;
+	}
+
+	public int getOtherMonthlyIncome() {
+		return otherMonthlyIncome;
+	}
+
+	public int getTotalMonthlySalary(){
+		return getMonthlySalary() + getOtherMonthlyIncome();
+	}
 	
 	public void setAnnualDeductible(int deductible) {	
 		this.annualDeductible = deductible;
+	}
+
+	public int getAnnualDeductible() {
+		return annualDeductible;
 	}
 	
 	public void setAdditionalIncome(int income) {	
 		this.otherMonthlyIncome = income;
 	}
 	
-	public int getAnnualIncomeTax(Employee employee) {
-		
-		//Menghitung berapa lama pegawai bekerja dalam setahun ini, jika pegawai sudah bekerja dari tahun sebelumnya maka otomatis dianggap 12 bulan.
-		LocalDate date = LocalDate.now();
-		
-		if (date.getYear() == employee.getDateJoined().getYear()) {
-			monthWorkingInYear = date.getMonthValue() - employee.getDateJoined().getMonthValue();
-		}else {
-			monthWorkingInYear = 12;
-		}
-		
-		return TaxFunction.calculateTax(monthlySalary, otherMonthlyIncome, monthWorkingInYear, annualDeductible, child.getSpouseIdNumber().equals(""), child.getChildIdNumber().size());
-	}
 }
